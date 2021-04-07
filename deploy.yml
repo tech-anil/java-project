@@ -1,0 +1,7 @@
+---
+ - hosts: infra
+   tasks:
+   - name: pull image from registery
+     raw: docker pull techanil371/mydevops:myproj1.0
+   - name: create docker container
+     raw: docker run -dti --name prod-env - 8086 techanil371/mydevops:myproj1.0
